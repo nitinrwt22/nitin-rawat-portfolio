@@ -3,6 +3,9 @@ import { useAudio } from './hooks/useAudio';
 import { usePerformance } from './hooks/usePerformance';
 import { Scene03Dossier } from './components/scenes/Scene03Dossier';
 import { Scene04Evidence } from './components/scenes/Scene04Evidence';
+import { Scene05Matrix } from './components/scenes/Scene05Matrix';
+import { Scene06History } from './components/scenes/Scene06History';
+import { Scene07Contact } from './components/scenes/Scene07Contact';
 import { CaseStudyModal } from './components/modals/CaseStudyModal';
 import { ResumeModal } from './components/modals/ResumeModal';
 import { MusicPlayer } from './components/audio/MusicPlayer';
@@ -10,7 +13,7 @@ import type { Project } from './utils/projectData';
 
 export const App: React.FC = () => {
   usePerformance();
-  const { playSFX } = useAudio();
+  const { playSFX, unlockAudioOnEnter } = useAudio();
 
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [isZoomed, setIsZoomed] = useState(false);
@@ -18,6 +21,11 @@ export const App: React.FC = () => {
   const [activeScene, setActiveScene] = useState<string>('scene-02-newspaper-wanted');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
+
+  // Trigger instant audio unlock as soon as user enters or interacts
+  useEffect(() => {
+    unlockAudioOnEnter();
+  }, [unlockAudioOnEnter]);
 
   // Atmospheric Dust Particles (Strict Stitch Canvas Implementation)
   useEffect(() => {
@@ -106,6 +114,9 @@ export const App: React.FC = () => {
       'scene-02-newspaper-wanted',
       'scene-03-case-file-dossier',
       'scene-04-engineering-evidence',
+      'scene-05-capabilities',
+      'scene-06-case-history',
+      'scene-07-dossier-contact',
     ];
 
     sceneIds.forEach((id) => {
@@ -605,8 +616,23 @@ export const App: React.FC = () => {
             ========================================================================= */}
         <Scene04Evidence
           onSelectProject={(project) => setSelectedProject(project)}
-          onProceedToCapabilities={() => scrollToScene('scene-04-engineering-evidence')}
+          onProceedToCapabilities={() => scrollToScene('scene-05-capabilities')}
         />
+
+        {/* =========================================================================
+            SCENE 05: TECHNICAL MATRIX & CORE CAPABILITIES
+            ========================================================================= */}
+        <Scene05Matrix />
+
+        {/* =========================================================================
+            SCENE 06: CASE HISTORY & OPERATIONAL TIMELINE
+            ========================================================================= */}
+        <Scene06History />
+
+        {/* =========================================================================
+            SCENE 07: CONTACT & ENCRYPTED TRANSMISSION
+            ========================================================================= */}
+        <Scene07Contact onOpenResumeModal={() => setIsResumeOpen(true)} />
       </main>
 
       {/* =========================================================================
@@ -619,9 +645,9 @@ export const App: React.FC = () => {
             { id: 'scene-02-newspaper-wanted', label: '02 WANTED', target: 'scene-02-newspaper-wanted' },
             { id: 'scene-03-case-file-dossier', label: '03 DOSSIER', target: 'scene-03-case-file-dossier' },
             { id: 'scene-04-engineering-evidence', label: '04 EVIDENCE', target: 'scene-04-engineering-evidence' },
-            { id: 'scene-05-capabilities', label: '05 MATRIX', target: 'scene-04-engineering-evidence' },
-            { id: 'scene-06-case-history', label: '06 HISTORY', target: 'scene-04-engineering-evidence' },
-            { id: 'scene-07-dossier-contact', label: '07 CONTACT', target: 'scene-03-case-file-dossier' },
+            { id: 'scene-05-capabilities', label: '05 MATRIX', target: 'scene-05-capabilities' },
+            { id: 'scene-06-case-history', label: '06 HISTORY', target: 'scene-06-case-history' },
+            { id: 'scene-07-dossier-contact', label: '07 CONTACT', target: 'scene-07-dossier-contact' },
           ].map((item) => {
             const isActive = activeScene === item.id;
             return (

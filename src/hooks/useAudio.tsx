@@ -16,6 +16,7 @@ export interface AudioContextType {
   musicVolume: number;
   setMusicVolume: (volume: number) => void;
   currentTrack: string;
+  unlockAudioOnEnter: () => void;
 }
 
 const AudioContext = createContext<AudioContextType | undefined>(undefined);
@@ -108,24 +109,34 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     });
   };
 
+  const unlockAudioOnEnter = () => {
+    if (audioCtxRef.current && audioCtxRef.current.state === 'suspended' && !isMuted) {
+      audioCtxRef.current.resume().catch(() => {});
+    }
+    if (musicAudioRef.current && !userPausedMusic) {
+      if (isMuted) {
+        setIsMuted(false);
+        musicAudioRef.current.muted = false;
+        localStorage.setItem('audio_muted', 'false');
+      }
+      if (musicAudioRef.current.paused) {
+        musicAudioRef.current.play().then(() => {
+          setIsPlayingMusic(true);
+        }).catch(() => {});
+      }
+    }
+  };
+
   useEffect(() => {
     const handleInteraction = () => {
-      if (audioCtxRef.current && audioCtxRef.current.state === 'suspended' && !isMuted) {
-        audioCtxRef.current.resume().catch(() => {});
-      }
-
-      if (musicAudioRef.current && !isMuted && !userPausedMusic && musicAudioRef.current.paused) {
-        musicAudioRef.current.play().catch(() => {});
-      }
+      unlockAudioOnEnter();
     };
 
-    window.addEventListener('click', handleInteraction, { passive: true });
-    window.addEventListener('touchstart', handleInteraction, { passive: true });
-    window.addEventListener('keydown', handleInteraction, { passive: true });
+    const events = ['click', 'pointerdown', 'mousedown', 'touchstart', 'keydown', 'scroll', 'wheel', 'mousemove'];
+    events.forEach((ev) => window.addEventListener(ev, handleInteraction, { passive: true, once: ev === 'mousemove' }));
+
     return () => {
-      window.removeEventListener('click', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
-      window.removeEventListener('keydown', handleInteraction);
+      events.forEach((ev) => window.removeEventListener(ev, handleInteraction));
     };
   }, [isMuted, userPausedMusic]);
 
@@ -424,6 +435,7 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         musicVolume,
         setMusicVolume,
         currentTrack,
+        unlockAudioOnEnter,
       }}
     >
       {children}
