@@ -1,0 +1,53 @@
+:root {
+  /* ==========================================================================
+     OBSIDIAN DOSSIER DESIGN SYSTEM TOKENS (Google Stitch Authority)
+     ========================================================================== */
+
+  /* Canvas Substrate & Surfaces */
+  --color-canvas: #050505;               /* Pure Obsidian Black substrate */
+  --color-surface-lowest: #0e0e0e;       /* Deep floor canvas */
+  --color-surface-low: #141414;          /* Dossier base container */
+  --color-surface: #131313;              /* Card interior surface */
+  --color-surface-container: #161616;    /* Elevated container */
+  --color-surface-high: #201f1f;         /* Interactive surface hover */
+  --color-surface-highest: #2a2a2a;      /* Distinct chip background */
+  --color-surface-bright: #3a3939;       /* Highlighted control border */
+
+  /* Foregrounds & Typography */
+  --color-primary: #f0eee8;              /* Authentic Warm Paper White */
+  --color-primary-fixed: #e4e2dc;        /* Broadsheet newsprint paper body */
+  --color-primary-fixed-dim: #c8c6c1;    /* Aged newsprint paper shading */
+  --color-on-primary: #30312d;           /* Dark text on white buttons */
+  --color-on-surface: #e5e2e1;           /* Main readable body text */
+  --color-on-surface-variant: #c7c7bf;   /* Secondary description, telemetry */
+  --color-outline: #91918a;              /* Monospace labels, column headers */
+  --color-outline-variant: #464741;      /* Secondary dividers */
+
+  /* Evidentiary Accents (Archival Red) */
+  --color-secondary: #8f1d1d;            /* Archival Red: alert pips, badges */
+  --color-secondary-hover: #a32a2a;      /* Active button hover */
+  --color-secondary-container: #8a191a;  /* Stamp fill & classified tags */
+  --color-on-secondary-container: #ff9991; /* Highlight text on red */
+  --color-secondary-glow: rgba(163, 42, 42, 0.35);
+
+  /* Hairlines & Borders */
+  --border-hairline: 1px solid #1f1f1f;  /* Resting hairline */
+  --border-hairline-active: 1px solid #333333; /* Hover active border */
+  --border-hairline-bright: 1px solid #4a4a4a;
+  --border-classified: 1px solid #8f1d1d;
+
+  /* Typography Families */
+  --font-headline: 'Bodoni Moda', Georgia, serif;
+  --font-body: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Transitions & Motion */
+  --ease-impact: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-slide: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-fast: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Max Viewport Bounds */
+  --container-max-7xl: 1280px;
+  --container-max-6xl: 1152px;
+  --container-max-5xl: 1024px;
+}
