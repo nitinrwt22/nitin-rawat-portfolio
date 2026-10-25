@@ -144,12 +144,12 @@ export const App: React.FC = () => {
           GLOBAL STITCH TOP HEADER
           ========================================================================= */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.6)]">
-        <div className="h-14 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between">
-          <div className="flex items-center gap-space-md">
+        <div className="h-14 max-w-7xl mx-auto px-3 sm:px-margin-mobile lg:px-margin flex items-center justify-between">
+          <div className="flex items-center gap-space-sm md:gap-space-md">
             <div className="flex items-center gap-space-xs">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              <span className="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase">
-                STATUS: ACTIVE // CLASSIFIED DOSSIER NR-001
+              <span className="font-label-sm text-[11px] sm:text-label-sm tracking-widest text-on-surface-variant uppercase">
+                <span className="hidden sm:inline">STATUS: ACTIVE // </span>DOSSIER NR-001
               </span>
             </div>
             <span className="hidden md:inline font-label-sm text-label-sm text-outline">
@@ -157,12 +157,12 @@ export const App: React.FC = () => {
             </span>
           </div>
 
-          <div className="flex items-center gap-space-md">
+          <div className="flex items-center gap-2 sm:gap-space-md">
             {/* Tactical Soundtrack Controller (noname.mp3) */}
             <MusicPlayer />
 
             <a
-              className="font-label-sm text-label-sm text-secondary hover:text-on-surface tracking-widest uppercase transition-colors cursor-pointer"
+              className="hidden md:inline font-label-sm text-label-sm text-secondary hover:text-on-surface tracking-widest uppercase transition-colors cursor-pointer"
               data-path="scene-03-case-file-dossier"
               href="#scene-03-case-file-dossier"
               onClick={(e) => {
@@ -173,7 +173,7 @@ export const App: React.FC = () => {
               SKIP INTRO // DIRECT ACCESS
             </a>
 
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center overflow-hidden border border-outline/30">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center overflow-hidden border border-outline/30 shrink-0">
               <img
                 src="/assets/blazer.jpg"
                 alt="Nitin Rawat"
@@ -182,7 +182,7 @@ export const App: React.FC = () => {
                   (e.currentTarget as HTMLElement).style.display = 'none';
                 }}
               />
-              <span className="material-symbols-outlined text-on-primary text-[18px]">
+              <span className="material-symbols-outlined text-on-primary text-[16px] sm:text-[18px]">
                 person
               </span>
             </div>
@@ -207,14 +207,14 @@ export const App: React.FC = () => {
           <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-b from-primary/10 via-primary/5 to-transparent blur-3xl z-10" />
 
           {/* Stage Workspace Area */}
-          <div className="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-8 md:py-12 flex flex-col items-center relative z-20">
+          <div className="w-full max-w-7xl mx-auto px-3 sm:px-margin-mobile lg:px-margin py-6 sm:py-8 md:py-12 flex flex-col items-center relative z-20">
             {/* Top Forensic Telemetry & Fast Actions Ribbon */}
-            <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md mb-8">
-              <div className="flex flex-wrap items-center gap-space-sm">
-                <span className="px-space-sm py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase">
+            <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm md:gap-space-md mb-6 md:mb-8">
+              <div className="flex flex-wrap items-center gap-space-xs sm:gap-space-sm">
+                <span className="px-space-xs sm:px-space-sm py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] sm:text-label-sm tracking-wider sm:tracking-widest uppercase">
                   EVIDENCE RETRIEVAL: 100%
                 </span>
-                <span className="px-space-sm py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm tracking-widest uppercase font-semibold">
+                <span className="px-space-xs sm:px-space-sm py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-[10px] sm:text-label-sm tracking-wider sm:tracking-widest uppercase font-semibold">
                   LEVEL-5 DECLASSIFIED
                 </span>
                 <span className="font-label-sm text-label-sm text-outline tracking-wider hidden sm:inline">
@@ -222,9 +222,9 @@ export const App: React.FC = () => {
                 </span>
               </div>
 
-              <div className="flex items-center gap-space-sm self-end md:self-auto">
+              <div className="flex items-center gap-space-xs sm:gap-space-sm self-stretch sm:self-auto justify-between sm:justify-end">
                 <button
-                  className="group flex items-center gap-space-xs px-3 py-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"
+                  className="group flex items-center gap-space-xs px-2.5 sm:px-3 py-1.5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"
                   id="toggle-zoom-btn"
                   type="button"
                   onClick={handleToggleZoom}
@@ -232,17 +232,17 @@ export const App: React.FC = () => {
                   <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">
                     {isZoomed ? 'zoom_out' : 'zoom_in'}
                   </span>
-                  <span className="font-label-sm text-label-sm text-on-surface-variant group-hover:text-primary tracking-widest uppercase">
-                    {isZoomed ? 'RESET VIEW [1.0X]' : 'INSPECT PAPER [1.0X]'}
+                  <span className="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-hover:text-primary tracking-widest uppercase">
+                    {isZoomed ? 'RESET [1.0X]' : 'INSPECT [1.0X]'}
                   </span>
                 </button>
 
                 <a
-                  className="flex items-center gap-space-xs px-3 py-1.5 bg-primary text-on-primary hover:bg-primary-fixed transition-colors font-label-sm text-label-sm tracking-widest font-bold uppercase"
+                  className="flex items-center gap-space-xs px-2.5 sm:px-3 py-1.5 bg-primary text-on-primary hover:bg-primary-fixed transition-colors font-label-sm text-[10px] sm:text-label-sm tracking-widest font-bold uppercase"
                   data-path="scene-04-engineering-evidence"
                   href="#scene-04-engineering-evidence"
                 >
-                  SKIP DIRECT TO PORTFOLIO
+                  <span>SKIP TO PORTFOLIO</span>
                   <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
               </div>
@@ -267,17 +267,17 @@ export const App: React.FC = () => {
                 <div className="pointer-events-none absolute -bottom-1 -right-1 w-24 h-24 bg-gradient-to-tl from-surface-container-lowest/40 to-transparent z-20" />
 
                 {/* NEWSPAPER INNER CONTENT GRID */}
-                <div className="p-5 sm:p-8 md:p-12 relative z-10 flex flex-col">
+                <div className="p-3.5 sm:p-8 md:p-12 relative z-10 flex flex-col">
                   {/* 1. MASTHEAD BAR */}
                   <header className="flex flex-col items-center text-center pb-4 relative">
-                    <div className="w-full flex items-center justify-between pb-2">
-                      <span className="font-label-sm text-label-sm tracking-[0.25em] text-on-primary-container font-semibold uppercase">
+                    <div className="w-full flex flex-wrap sm:flex-nowrap items-center justify-between gap-1 pb-2">
+                      <span className="font-label-sm text-[10px] sm:text-label-sm tracking-[0.15em] sm:tracking-[0.25em] text-on-primary-container font-semibold uppercase">
                         VOL. CXLII... No. 49,201
                       </span>
-                      <span className="font-label-sm text-label-sm tracking-[0.3em] text-on-primary-fixed-variant font-bold uppercase bg-surface-container-lowest text-primary-fixed px-2 py-0.5">
+                      <span className="font-label-sm text-[10px] sm:text-label-sm tracking-[0.2em] sm:tracking-[0.3em] text-on-primary-fixed-variant font-bold uppercase bg-surface-container-lowest text-primary-fixed px-2 py-0.5">
                         SPECIAL POLICE EXTRA EDITION
                       </span>
-                      <span className="font-label-sm text-label-sm tracking-[0.2em] text-on-primary-container uppercase">
+                      <span className="font-label-sm text-[10px] sm:text-label-sm tracking-[0.15em] sm:tracking-[0.2em] text-on-primary-container uppercase">
                         PRICE FIVE CENTS
                       </span>
                     </div>
@@ -287,15 +287,15 @@ export const App: React.FC = () => {
                     <div className="w-full h-px bg-surface-container-lowest mb-3" />
 
                     {/* Newspaper Title */}
-                    <h1 className="font-headline-xl text-headline-xl md:text-[68px] md:leading-[64px] tracking-tight uppercase font-extrabold text-surface-container-lowest">
+                    <h1 className="font-headline-xl text-3xl sm:text-5xl md:text-[68px] md:leading-[64px] tracking-tight uppercase font-extrabold text-surface-container-lowest font-['Bodoni_Moda']">
                       THE CHRONICLE DISPATCH
                     </h1>
-                    <p className="font-label-sm text-label-sm tracking-[0.45em] text-on-primary-fixed-variant uppercase mt-1">
+                    <p className="font-label-sm text-[9px] sm:text-label-sm tracking-[0.25em] sm:tracking-[0.45em] text-on-primary-fixed-variant uppercase mt-1">
                       METROPOLITAN INVESTIGATION SECTION // BUREAU OF DIGITAL CRIMES &amp; DISTRIBUTED ALGORITHMS
                     </p>
 
                     <div className="w-full h-px bg-surface-container-lowest mt-3 mb-1" />
-                    <div className="w-full flex items-center justify-between text-on-primary-container font-label-sm text-label-sm py-1 font-medium">
+                    <div className="w-full flex flex-wrap sm:flex-nowrap items-center justify-between text-on-primary-container font-label-sm text-[10px] sm:text-label-sm py-1 font-medium gap-1">
                       <span>METROPOLITAN BUREAU</span>
                       <span>SPECIAL DOSSIER BULLETIN // FILE NR-001</span>
                       <span>GLOBAL REPOSITORY DISPATCH</span>
@@ -305,32 +305,32 @@ export const App: React.FC = () => {
 
                   {/* 2. MAIN EDITORIAL BANNER */}
                   <div className="py-4 md:py-6 text-center relative flex flex-col items-center justify-center">
-                    <div className="flex items-center gap-space-md mb-2">
-                      <span className="material-symbols-outlined text-secondary-container text-[28px]">
+                    <div className="flex items-center gap-1.5 sm:gap-space-md mb-2">
+                      <span className="material-symbols-outlined text-secondary-container text-[20px] sm:text-[28px]">
                         priority_high
                       </span>
-                      <span className="font-label-lg text-label-lg tracking-[0.35em] text-secondary-container uppercase font-bold">
+                      <span className="font-label-sm sm:font-label-lg text-[10px] sm:text-label-lg tracking-[0.2em] sm:tracking-[0.35em] text-secondary-container uppercase font-bold text-center">
                         WANTED BY THE HIGH-PERFORMANCE CODE DIVISION
                       </span>
-                      <span className="material-symbols-outlined text-secondary-container text-[28px]">
+                      <span className="material-symbols-outlined text-secondary-container text-[20px] sm:text-[28px]">
                         priority_high
                       </span>
                     </div>
 
-                    <div className="w-full font-headline-xl text-[64px] sm:text-[96px] md:text-[124px] leading-none tracking-tighter uppercase font-black text-surface-container-lowest mix-blend-darken scale-y-110 my-1">
+                    <div className="w-full font-headline-xl text-[44px] sm:text-[84px] md:text-[124px] leading-none tracking-tighter uppercase font-black text-surface-container-lowest mix-blend-darken scale-y-110 my-1 font-['Bodoni_Moda']">
                       MOST WANTED
                     </div>
 
                     {/* Red Classified Docket Stamp Overlay */}
-                    <div className="absolute -top-3 right-4 md:right-12 z-30 transform -rotate-6 pointer-events-none">
-                      <div className="px-4 py-2 bg-secondary-container/90 text-on-secondary-fixed text-center shadow-lg backdrop-blur-sm">
-                        <div className="font-label-sm text-[9px] tracking-[0.2em] uppercase text-primary font-bold">
+                    <div className="relative mt-2 md:mt-0 md:absolute md:-top-3 md:right-12 z-30 transform -rotate-3 md:-rotate-6 pointer-events-none">
+                      <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-secondary-container/90 text-on-secondary-fixed text-center shadow-lg backdrop-blur-sm border sm:border-2 border-secondary">
+                        <div className="font-label-sm text-[8px] sm:text-[9px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary font-bold">
                           DEPARTMENT OF ARCHIVAL SURVEILLANCE
                         </div>
-                        <div className="font-label-lg text-label-lg tracking-[0.15em] font-black uppercase text-on-secondary-container">
+                        <div className="font-label-lg text-[11px] sm:text-label-lg tracking-[0.1em] sm:tracking-[0.15em] font-black uppercase text-on-secondary-container">
                           CLASSIFIED EVIDENCE // NR-001
                         </div>
-                        <div className="font-label-sm text-[8px] tracking-[0.25em] text-primary/80 uppercase">
+                        <div className="font-label-sm text-[7px] sm:text-[8px] tracking-[0.2em] sm:tracking-[0.25em] text-primary/80 uppercase">
                           VERIFIED FOR IMMEDIATE ARREST
                         </div>
                       </div>
@@ -638,25 +638,25 @@ export const App: React.FC = () => {
       {/* =========================================================================
           GLOBAL STITCH BOTTOM FLOATING DOCK (DYNAMIC SCENE ACTIVE)
           ========================================================================= */}
-      <aside className="fixed bottom-space-lg left-1/2 -translate-x-1/2 z-40 max-w-fit px-space-md py-space-xs bg-surface-container/90 backdrop-blur-xl rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.8)]">
-        <nav className="flex items-center gap-space-xs">
+      <aside className="fixed bottom-3 md:bottom-space-lg left-1/2 -translate-x-1/2 z-40 max-w-[95vw] md:max-w-fit px-2 sm:px-space-md py-1 sm:py-space-xs bg-surface-container/95 backdrop-blur-xl rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.8)] border border-outline-variant/30">
+        <nav className="flex items-center gap-1 sm:gap-space-xs overflow-x-auto no-scrollbar">
           {[
-            { id: 'scene-01-darkness', label: '01 DARK', target: 'scene-02-newspaper-wanted' },
-            { id: 'scene-02-newspaper-wanted', label: '02 WANTED', target: 'scene-02-newspaper-wanted' },
-            { id: 'scene-03-case-file-dossier', label: '03 DOSSIER', target: 'scene-03-case-file-dossier' },
-            { id: 'scene-04-engineering-evidence', label: '04 EVIDENCE', target: 'scene-04-engineering-evidence' },
-            { id: 'scene-05-capabilities', label: '05 MATRIX', target: 'scene-05-capabilities' },
-            { id: 'scene-06-case-history', label: '06 HISTORY', target: 'scene-06-case-history' },
-            { id: 'scene-07-dossier-contact', label: '07 CONTACT', target: 'scene-07-dossier-contact' },
+            { id: 'scene-01-darkness', label: '01 DARK', shortLabel: '01', target: 'scene-02-newspaper-wanted' },
+            { id: 'scene-02-newspaper-wanted', label: '02 WANTED', shortLabel: '02', target: 'scene-02-newspaper-wanted' },
+            { id: 'scene-03-case-file-dossier', label: '03 DOSSIER', shortLabel: '03', target: 'scene-03-case-file-dossier' },
+            { id: 'scene-04-engineering-evidence', label: '04 EVIDENCE', shortLabel: '04', target: 'scene-04-engineering-evidence' },
+            { id: 'scene-05-capabilities', label: '05 MATRIX', shortLabel: '05', target: 'scene-05-capabilities' },
+            { id: 'scene-06-case-history', label: '06 HISTORY', shortLabel: '06', target: 'scene-06-case-history' },
+            { id: 'scene-07-dossier-contact', label: '07 CONTACT', shortLabel: '07', target: 'scene-07-dossier-contact' },
           ].map((item) => {
             const isActive = activeScene === item.id;
             return (
               <a
                 key={item.id}
                 aria-current={isActive ? 'page' : undefined}
-                className={`px-space-sm py-space-xs rounded-full font-label-sm text-label-sm transition-all cursor-pointer ${
+                className={`px-2.5 sm:px-space-sm py-1 sm:py-space-xs rounded-full font-label-sm text-[11px] sm:text-label-sm transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                   isActive
-                    ? 'bg-primary text-on-primary font-bold'
+                    ? 'bg-primary text-on-primary font-bold shadow-sm'
                     : 'text-on-surface-variant hover:text-on-surface'
                 }`}
                 data-path={item.id}
@@ -667,7 +667,8 @@ export const App: React.FC = () => {
                   setActiveScene(item.id);
                 }}
               >
-                {item.label}
+                <span className="hidden sm:inline">{item.label}</span>
+                <span className="sm:hidden font-mono font-bold">{item.shortLabel}</span>
               </a>
             );
           })}

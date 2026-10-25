@@ -160,17 +160,17 @@ export const Scene02Newspaper: React.FC<Scene02NewspaperProps> = ({
             <div className="pointer-events-none absolute -bottom-1 -right-1 w-24 h-24 bg-gradient-to-tl from-surface-container-lowest/40 to-transparent z-20" />
 
             {/* NEWSPAPER INNER CONTENT GRID */}
-            <div className="p-5 sm:p-8 md:p-12 relative z-10 flex flex-col">
+            <div className="p-3.5 sm:p-8 md:p-12 relative z-10 flex flex-col">
               {/* 1. MASTHEAD BAR */}
               <header className="flex flex-col items-center text-center pb-4 relative">
-                <div className="w-full flex items-center justify-between pb-2">
-                  <span className="font-label-sm text-label-sm tracking-[0.25em] text-on-primary-container font-semibold uppercase">
+                <div className="w-full flex flex-wrap sm:flex-nowrap items-center justify-between gap-1 pb-2">
+                  <span className="font-label-sm text-[10px] sm:text-label-sm tracking-[0.15em] sm:tracking-[0.25em] text-on-primary-container font-semibold uppercase">
                     VOL. CXLII... No. 49,201
                   </span>
-                  <span className="font-label-sm text-label-sm tracking-[0.3em] text-on-primary-fixed-variant font-bold uppercase bg-surface-container-lowest text-primary-fixed px-2 py-0.5">
+                  <span className="font-label-sm text-[10px] sm:text-label-sm tracking-[0.2em] sm:tracking-[0.3em] text-on-primary-fixed-variant font-bold uppercase bg-surface-container-lowest text-primary-fixed px-2 py-0.5">
                     SPECIAL POLICE EXTRA EDITION
                   </span>
-                  <span className="font-label-sm text-label-sm tracking-[0.2em] text-on-primary-container uppercase">
+                  <span className="font-label-sm text-[10px] sm:text-label-sm tracking-[0.15em] sm:tracking-[0.2em] text-on-primary-container uppercase">
                     PRICE FIVE CENTS
                   </span>
                 </div>
@@ -180,15 +180,15 @@ export const Scene02Newspaper: React.FC<Scene02NewspaperProps> = ({
                 <div className="w-full h-px bg-surface-container-lowest mb-3" />
 
                 {/* Newspaper Title */}
-                <h1 className="font-headline-xl text-headline-xl md:text-[68px] md:leading-[64px] tracking-tight uppercase font-extrabold text-surface-container-lowest font-['Bodoni_Moda']">
+                <h1 className="font-headline-xl text-3xl sm:text-5xl md:text-[68px] md:leading-[64px] tracking-tight uppercase font-extrabold text-surface-container-lowest font-['Bodoni_Moda']">
                   THE CHRONICLE DISPATCH
                 </h1>
-                <p className="font-label-sm text-label-sm tracking-[0.45em] text-on-primary-fixed-variant uppercase mt-1">
-                  METROPOLITAN INVESTIGATION SECTION // BUREAU OF DIGITAL CRIMES & DISTRIBUTED ALGORITHMS
+                <p className="font-label-sm text-[9px] sm:text-label-sm tracking-[0.25em] sm:tracking-[0.45em] text-on-primary-fixed-variant uppercase mt-1">
+                  METROPOLITAN INVESTIGATION SECTION // BUREAU OF DIGITAL CRIMES &amp; DISTRIBUTED ALGORITHMS
                 </p>
 
                 <div className="w-full h-px bg-surface-container-lowest mt-3 mb-1" />
-                <div className="w-full flex items-center justify-between text-on-primary-container font-label-sm text-label-sm py-1 font-medium">
+                <div className="w-full flex flex-wrap sm:flex-nowrap items-center justify-between text-on-primary-container font-label-sm text-[10px] sm:text-label-sm py-1 font-medium gap-1">
                   <span>METROPOLITAN BUREAU</span>
                   <span>SPECIAL DOSSIER BULLETIN // FILE NR-001</span>
                   <span>GLOBAL REPOSITORY DISPATCH</span>
@@ -198,32 +198,32 @@ export const Scene02Newspaper: React.FC<Scene02NewspaperProps> = ({
 
               {/* 2. MAIN EDITORIAL BANNER */}
               <div className="py-4 md:py-6 text-center relative flex flex-col items-center justify-center">
-                <div className="flex items-center gap-space-md mb-2">
-                  <span className="material-symbols-outlined text-secondary-container text-[28px]">
+                <div className="flex items-center gap-1.5 sm:gap-space-md mb-2">
+                  <span className="material-symbols-outlined text-secondary-container text-[20px] sm:text-[28px]">
                     priority_high
                   </span>
-                  <span className="font-label-lg text-label-lg tracking-[0.35em] text-secondary-container uppercase font-bold">
+                  <span className="font-label-sm sm:font-label-lg text-[10px] sm:text-label-lg tracking-[0.2em] sm:tracking-[0.35em] text-secondary-container uppercase font-bold text-center">
                     WANTED BY THE HIGH-PERFORMANCE CODE DIVISION
                   </span>
-                  <span className="material-symbols-outlined text-secondary-container text-[28px]">
+                  <span className="material-symbols-outlined text-secondary-container text-[20px] sm:text-[28px]">
                     priority_high
                   </span>
                 </div>
 
-                <div className="w-full font-headline-xl text-[64px] sm:text-[96px] md:text-[124px] leading-none tracking-tighter uppercase font-black text-surface-container-lowest mix-blend-darken scale-y-110 my-1 font-['Bodoni_Moda']">
+                <div className="w-full font-headline-xl text-[44px] sm:text-[84px] md:text-[124px] leading-none tracking-tighter uppercase font-black text-surface-container-lowest mix-blend-darken scale-y-110 my-1 font-['Bodoni_Moda']">
                   MOST WANTED
                 </div>
 
                 {/* Red Classified Docket Stamp Overlay */}
-                <div className="absolute -top-3 right-4 md:right-12 z-30 transform -rotate-6 pointer-events-none">
-                  <div className="px-4 py-2 bg-secondary-container/90 text-on-secondary-fixed text-center shadow-lg backdrop-blur-sm border-2 border-secondary">
-                    <div className="font-label-sm text-[9px] tracking-[0.2em] uppercase text-primary font-bold">
+                <div className="relative mt-2 md:mt-0 md:absolute md:-top-3 md:right-12 z-30 transform -rotate-3 md:-rotate-6 pointer-events-none">
+                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-secondary-container/90 text-on-secondary-fixed text-center shadow-lg backdrop-blur-sm border sm:border-2 border-secondary">
+                    <div className="font-label-sm text-[8px] sm:text-[9px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-primary font-bold">
                       DEPARTMENT OF ARCHIVAL SURVEILLANCE
                     </div>
-                    <div className="font-label-lg text-label-lg tracking-[0.15em] font-black uppercase text-on-secondary-container">
+                    <div className="font-label-lg text-[11px] sm:text-label-lg tracking-[0.1em] sm:tracking-[0.15em] font-black uppercase text-on-secondary-container">
                       CLASSIFIED EVIDENCE // NR-001
                     </div>
-                    <div className="font-label-sm text-[8px] tracking-[0.25em] text-primary/80 uppercase">
+                    <div className="font-label-sm text-[7px] sm:text-[8px] tracking-[0.2em] sm:tracking-[0.25em] text-primary/80 uppercase">
                       VERIFIED FOR IMMEDIATE ARREST
                     </div>
                   </div>

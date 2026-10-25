@@ -119,11 +119,11 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
               </div>
 
               {/* Actions */}
-              <div className="flex flex-wrap items-center gap-space-sm mt-space-lg pt-space-sm">
+              <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-space-sm mt-space-lg pt-space-sm">
                 <button
                   type="button"
                   onClick={() => handleProjectClick(paylock)}
-                  className="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-fixed transition-all flex items-center gap-space-xs font-bold cursor-pointer"
+                  className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-fixed transition-all flex items-center gap-space-xs font-bold cursor-pointer"
                 >
                   <span>View Architecture Case Study</span>
                   <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
@@ -133,13 +133,13 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
                   href={paylock.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded hover:bg-surface-container-high transition-all flex items-center gap-space-xs"
+                  className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded hover:bg-surface-container-high transition-all flex items-center gap-space-xs"
                 >
                   <span className="material-symbols-outlined text-[14px]">terminal</span>
                   <span>GitHub Repository</span>
                 </a>
 
-                <div className="px-space-md py-space-xs bg-surface-container text-secondary font-label-md text-label-md uppercase tracking-wider rounded flex items-center gap-space-xs border border-secondary/30">
+                <div className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-surface-container text-secondary font-label-md text-label-md uppercase tracking-wider rounded flex items-center gap-space-xs border border-secondary/30">
                   <span className="material-symbols-outlined text-[14px]">lock</span>
                   <span>ACID Guaranteed</span>
                 </div>
@@ -291,11 +291,11 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
               </div>
 
               {/* Actions */}
-              <div className="flex flex-wrap items-center gap-space-sm mt-space-lg pt-space-sm">
+              <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-space-sm mt-space-lg pt-space-sm">
                 <button
                   type="button"
                   onClick={() => handleProjectClick(atmRoute)}
-                  className="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-fixed transition-all flex items-center gap-space-xs font-bold cursor-pointer"
+                  className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-fixed transition-all flex items-center gap-space-xs font-bold cursor-pointer"
                 >
                   <span>View Architecture Case Study</span>
                   <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
@@ -305,13 +305,13 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
                   href={atmRoute.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded hover:bg-surface-container-high transition-all flex items-center gap-space-xs"
+                  className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded hover:bg-surface-container-high transition-all flex items-center gap-space-xs"
                 >
                   <span className="material-symbols-outlined text-[14px]">terminal</span>
                   <span>GitHub Repository</span>
                 </a>
 
-                <div className="px-space-md py-space-xs bg-surface-container text-secondary font-label-md text-label-md uppercase tracking-wider rounded flex items-center gap-space-xs border border-secondary/30">
+                <div className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-surface-container text-secondary font-label-md text-label-md uppercase tracking-wider rounded flex items-center gap-space-xs border border-secondary/30">
                   <span className="material-symbols-outlined text-[14px]">local_shipping</span>
                   <span>INR 50L Cap Enforced</span>
                 </div>
@@ -473,11 +473,11 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
               </div>
 
               {/* Actions */}
-              <div className="flex flex-wrap items-center gap-space-sm mt-space-lg pt-space-sm">
+              <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-space-sm mt-space-lg pt-space-sm">
                 <button
                   type="button"
                   onClick={() => handleProjectClick(cramroom)}
-                  className="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-fixed transition-all flex items-center gap-space-xs font-bold cursor-pointer"
+                  className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-fixed transition-all flex items-center gap-space-xs font-bold cursor-pointer"
                 >
                   <span>View Architecture Case Study</span>
                   <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
@@ -487,13 +487,13 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
                   href={cramroom.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded hover:bg-surface-container-high transition-all flex items-center gap-space-xs"
+                  className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded hover:bg-surface-container-high transition-all flex items-center gap-space-xs"
                 >
                   <span className="material-symbols-outlined text-[14px]">terminal</span>
                   <span>GitHub Repository</span>
                 </a>
 
-                <div className="px-space-md py-space-xs bg-surface-container text-secondary font-label-md text-label-md uppercase tracking-wider rounded flex items-center gap-space-xs border border-secondary/30">
+                <div className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-surface-container text-secondary font-label-md text-label-md uppercase tracking-wider rounded flex items-center gap-space-xs border border-secondary/30">
                   <span className="material-symbols-outlined text-[14px]">trending_down</span>
                   <span>-60% DB Latency</span>
                 </div>
@@ -645,11 +645,11 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
               </div>
 
               {/* Actions */}
-              <div className="flex flex-wrap items-center gap-space-sm mt-space-lg pt-space-sm">
+              <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-space-sm mt-space-lg pt-space-sm">
                 <button
                   type="button"
                   onClick={() => handleProjectClick(codemaster)}
-                  className="px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-fixed transition-all flex items-center gap-space-xs font-bold cursor-pointer"
+                  className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-fixed transition-all flex items-center gap-space-xs font-bold cursor-pointer"
                 >
                   <span>View Architecture Case Study</span>
                   <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
@@ -659,13 +659,13 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
                   href={codemaster.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded hover:bg-surface-container-high transition-all flex items-center gap-space-xs"
+                  className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded hover:bg-surface-container-high transition-all flex items-center gap-space-xs"
                 >
                   <span className="material-symbols-outlined text-[14px]">terminal</span>
                   <span>GitHub Repository</span>
                 </a>
 
-                <div className="px-space-md py-space-xs bg-surface-container text-secondary font-label-md text-label-md uppercase tracking-wider rounded flex items-center gap-space-xs border border-secondary/30">
+                <div className="w-full sm:w-auto justify-center px-space-md py-space-xs bg-surface-container text-secondary font-label-md text-label-md uppercase tracking-wider rounded flex items-center gap-space-xs border border-secondary/30">
                   <span className="material-symbols-outlined text-[14px]">speed</span>
                   <span>&lt;30ms Latency</span>
                 </div>
@@ -846,7 +846,7 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
                 </div>
 
                 {/* Granular Problem Difficulty Breakdown Tiles */}
-                <div className="grid grid-cols-3 gap-3 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 mb-6">
                   <div className="bg-surface-container p-3 rounded text-center border border-outline-variant/30">
                     <span className="font-mono text-[10px] text-outline uppercase block mb-1">
                       EASY
@@ -911,22 +911,24 @@ export const Scene04Evidence: React.FC<Scene04EvidenceProps> = ({
 
                 {/* Visual Consistency Heatmap Grid Matrix (Simulated 52 Weeks) */}
                 <div className="bg-surface-container p-3 rounded border border-outline-variant/30">
-                  <div className="flex justify-between items-center mb-2 font-mono text-[10px] text-outline">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1 mb-2 font-mono text-[10px] text-outline">
                     <span>DAILY RELENTLESS PRACTICE GRID</span>
                     <span className="text-secondary font-bold">ACTIVE CONTINUOUS STREAK</span>
                   </div>
-                  <div className="grid grid-cols-24 gap-1 h-10 w-full overflow-hidden">
-                    {Array.from({ length: 96 }).map((_, i) => {
-                      const intensities = ['bg-surface-container-highest', 'bg-secondary/40', 'bg-secondary/70', 'bg-secondary'];
-                      const intensity = intensities[Math.floor((Math.sin(i * 1.3) + 1) * 1.8) % 4];
-                      return (
-                        <div
-                          key={i}
-                          className={`rounded-[1px] w-full h-full ${intensity} hover:scale-125 transition-transform`}
-                          title={`Algorithmic session: ${i + 1}`}
-                        />
-                      );
-                    })}
+                  <div className="w-full overflow-x-auto pb-1">
+                    <div className="grid grid-cols-24 gap-1 h-10 min-w-[340px] sm:min-w-0">
+                      {Array.from({ length: 96 }).map((_, i) => {
+                        const intensities = ['bg-surface-container-highest', 'bg-secondary/40', 'bg-secondary/70', 'bg-secondary'];
+                        const intensity = intensities[Math.floor((Math.sin(i * 1.3) + 1) * 1.8) % 4];
+                        return (
+                          <div
+                            key={i}
+                            className={`rounded-[1px] w-full h-full ${intensity} hover:scale-125 transition-transform`}
+                            title={`Algorithmic session: ${i + 1}`}
+                          />
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
